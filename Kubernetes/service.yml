@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: service
+  labels:ansible-devops-project
+spec:
+  selector:
+    app: ansible-devops-project
+  type: LoadBalancer
+  ports:
+    - port: 8080
+      targetPort: 8080
+      nodePort: 31200
